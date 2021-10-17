@@ -6,8 +6,8 @@ def read_files():
     basePath = 'pdf-files'  # pdf file folder
     pdfFiles = os.listdir(basePath)  # [] with every pdf file in files/
     for file in pdfFiles:
-        images = convert_from_path(f"pdf-files\\{file}",        #put your pdfs in the 'file folder'
-                                   500,                     #dpi
+        images = convert_from_path(f"pdf-files\\{file}",        #put your pdfs in the 'pdf-files' folder
+                                   500,                     #dpi, lowering this speeds up the process but also lowers quality, play around with it
                                    jpegopt={
                                        "quality": 100,
                                        "progressive": True,
